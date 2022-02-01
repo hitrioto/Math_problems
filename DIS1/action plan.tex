@@ -1,0 +1,162 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+
+\usepackage{systeme}
+\usepackage{amsmath}
+
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+
+\newtheorem{definition}{Дефиниция}
+
+\usepackage{comment}
+%\use
+\newtheorem{problem}{Задача}
+
+\newcounter{solution}
+
+\usepackage{graphicx}
+\usepackage{pst-plot}
+
+\usepackage{tikz}
+
+\newcommand\solution{%
+	\stepcounter{solution}%
+	\textbf{Решение :}\\%
+}
+
+
+\date{}
+
+\title{План анализ(mission possible)}
+\begin{document}
+	
+	\maketitle
+	Записваме подолу план за действие за вземане на изпит. A lot'a work needed for the mission to succeed.
+	\begin{enumerate}
+		
+		\item  Тема 1 - не се учи
+		\item Тема 2 - не се учи
+		\item Тема 3 - не се учи
+		\item Тема 4 - не се учи
+		\item Редица, сходяща редица, околност.
+		\begin{itemize}
+		\item сх. редица е ограничена
+		\item премахване краен брой членове не променя границата
+		\item $a_n \pm  b_n \to a\pm b$
+		\item Лема за полицаите(5.11)
+		\item Монотонно растяща и ограничена $\to $ сходяща
+	\end{itemize}
+		
+		\item подредица, редица на Коши
+		\begin{itemize}
+			\item сх. редица $\to$ подредица има същата граница
+			\item редица на Коши $\iff$ сходяща
+	
+		\end{itemize}
+	\item Темата е доказтелство на:\\
+	$e = 1 + \frac{1}{2!} + \frac{1}{3!} + ... $ и \\
+	$e = \lim (1+\frac{1}{n})^n $
+	
+	\item ред, частична сума
+	\begin{itemize}
+		\item от редици се прехвърлят няколко твърдения
+		\item $\sum \frac{1}{n}, \sum \frac{1}{n^2} $, геометр. прогресия
+	\end{itemize}
+	\item (не се учи, ако не знаеш предишната), абсолютно сходящ ред условно сходящ ред
+	\begin{itemize}
+		\item $\sum a_n b_n, |a_n|<\infty, b_n \to 0 $, e сходящ
+		\item ред с алтернативно сменящи се знаци е сходящ
+		\item какво става ако разместим членовете на условно сходящ/ абсолютно сходящ ред?
+	\end{itemize}
+	\item Умножаване на безкрайни редове
+	\begin{itemize}
+		\item $\sum a_n b_n$, при $\sum|a_n|<\infty$, $\sum b_n <\infty$, e сходящ
+		\item $e^x $ ред ма Тейлор
+		\end{itemize}
+	\item елементарни функции, растяща(монотонно), периодична.(Няма да се даде, няма нищо в тази тема)
+	\item Граници по Хайне, Коши. еквивалентност, точка на сгъстяване
+	\begin{itemize}
+		\item много определения за клонене на функция, $О(f)$ и $o(f).$
+	\end{itemize}
+	
+	
+	\item $\lim_{x\to0} \frac{sin(x)}{x} = 1  $, $\lim_{x\to0} \frac{e^x-1}{x} = 1  $, темата е само сметки и приложения на определенията(нисък приоритет)
+	
+	\item (don't know whether to study or not) Непрекъсната фунцкия, сума,разлика,композиция на непрекъснати функции, равномерна непрекъснатост.
+	\item Вайерщраски 1,2,3, обратна функция
+	\begin{itemize}
+		\item Непрекъсната функция в затворен интервал достига най-голямата и най-малката си стойност.
+		\item $f(a) < 0, f(b)>0 $ за $f$ дефинирана в $[a,b]$ има корен
+		\item непрекъсната функция в интервал е обратима
+	\end{itemize}
+	\item (don't know whether to study or not)$e^x$ - дефиниция и свойства(7 на брой), същото за логаритъм
+	\item (don't know whether to study or not) в кои интервали тригонометричните функции са обратими? обратни тригонометрични функции
+	
+	\item (!) Производна
+	\begin{enumerate}
+		\item $\exists f' \to f$ е непр.
+		\item Производна на $\pm$,  $.$, $/$.
+		\item Производна на полином
+		
+	\end{enumerate}
+	\item производна на сложна, обратна, $ln, arcsin$
+	\item (!) Локален min,max
+	\begin{itemize}
+		\item Ферма
+		\item Рол
+		\item Лагранж
+		\item Коши
+	\end{itemize}
+	\item n-ta производна, Формула на Тейлор
+	\begin{itemize}
+		\item $\exists f^{n+1} \to \exists$ ред на Taylor 
+		\item $ sin, cos$
+	\end{itemize}
+	\item изпъкнала, вдлъбната функция
+	\begin{enumerate}
+		\item $f''>0 \to$ изпъклана
+		\item $f$ изпъкнала$\to f(\sum(\lambda_i a_i)) \leq \sum \lambda_i f(a_i) $
+	\end{enumerate}
+	\item Лопитал(L'Hopital or L' (not) Ho(s)pital for newcommers), (no study)
+	\item The master plan is here! It was here all along!
+	\item Analytic Number theory for newborn(mathematicians) - (no study)
+	\begin{itemize}
+		\item алгебричните числа са изброимо м-во
+		\item Число на Лювил
+		\item Число на Ойлер
+	\end{itemize}
+	\item (!) Integrals(integrate 
+	'em all in your head!)
+	\begin{enumerate}
+		\item Дефиниция на примитивна, неопр. интеграл
+		\item основни интеграли
+		\item $\int f' = f$, $\int (\lambda f + \mu g) = \lambda \int f + \mu \int g $
+		\item интегриране по части, внасяне под диференциала
+	\end{enumerate}
+	\item Are you thinking rationally about functions? Or are you thinking about rational functions? (not for study)
+	\begin{enumerate}
+		\item Theorem
+	\end{enumerate}
+	\item no study
+	\item no study
+	
+	
+	
+	\end{enumerate}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}	
+	
+	
+
