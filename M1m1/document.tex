@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+
+\usepackage{systeme}
+\usepackage{amsmath}
+
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+
+\newtheorem{definition}{Дефиниция}
+
+\usepackage{comment}
+%\use
+\newtheorem{problem}{Задача}
+\newtheorem{theorem}{Теорема}
+\newcounter{solution}
+
+\usepackage{graphicx}
+\usepackage{pst-plot}
+
+\usepackage{tikz}
+
+\newcommand\solution{%
+	\stepcounter{solution}%
+	\textbf{Решение :}\\%
+}
+
+\usetikzlibrary{angles,
+	quotes}
+\usepackage{siunitx}
+
+%%%%
+\usepackage[margin=1in]{geometry}
+\usepackage{mathtools}
+\usepackage{array}
+
+\makeatletter
+\newcounter{elimination@steps}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash$}p{#1}<{$}}
+\def\elimination@num@rights{}
+\def\elimination@num@variables{}
+\def\elimination@col@width{}
+\newenvironment{elimination}[4][0]
+{
+	\setcounter{elimination@steps}{0}
+	\def\elimination@num@rights{#1}
+	\def\elimination@num@variables{#2}
+	\def\elimination@col@width{#3}
+	\renewcommand{\arraystretch}{#4}
+	\start@align\@ne\st@rredtrue\m@ne
+}
+{
+	\endalign
+	\ignorespacesafterend
+}
+\newcommand{\eliminationstep}[2]
+{
+	\ifnum\value{elimination@steps}>0\sim\quad\fi
+	\left[
+	\ifnum\elimination@num@rights>0
+	\begin{array}
+		{@{}*{\elimination@num@variables}{R{\elimination@col@width}}
+			|@{}*{\elimination@num@rights}{R{\elimination@col@width}}}
+		\else
+		\begin{array}
+			{@{}*{\elimination@num@variables}{R{\elimination@col@width}}}
+			\fi
+			#1
+		\end{array}
+		\right]
+		& 
+		\begin{array}{l}
+			#2
+		\end{array}
+		&%                                    moved second & here
+		\addtocounter{elimination@steps}{1}
+	}
+	\makeatother
+
+
+%%%%%
+
+
+
+\date{}
+
+\title{Хакване на някаква математика в УНСС}
+\begin{document}
+	\maketitle
+	
+	\section{Теми и коментари. Теория	}
+	
+	\subsection{Основни вероятностни понятия}
+	вероятност, събитие, благоприятно събитие, пермутации, комбинации, вариации, \\
+	случайна величина(непрекъсната и дискретна), разпределение, плътност, 
+	
+	
+	
+	\section{Решавани задачи и техни подобни}
+	
+	\begin{problem}
+		\begin{equation*}
+			\systeme{
+				3x +7z = 20,
+				y - 17z = -3,
+				24x + 15y = 7
+			}
+		\end{equation*}
+	\end{problem}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{elimination}[3]{3}{1.1em}{1.1}% Decreased from 1.75em
+		\eliminationstep
+		{
+			4 & -8 & 5 & 1 & 0 & 0 \\
+			4 & -7 & 4 & 0 & 1 & 0 \\
+			3 & -4 & 2 & 0 & 0 & 1
+		}
+		{
+			\\
+			-R_{1} \\
+			-\frac{3}{4} R_{1}
+		}
+		\eliminationstep
+		{
+			4 & -8 & 5 & 1 & 0 & 0 \\
+			0 &  1 & -1 & -1 & 1 & 0 \\
+			0 &  2 & -\frac{7}{4} & -\frac{3}{4} & 0 & 1
+		}
+		{
+			\\
+			\\
+			-2R_{2}
+		}
+		\\[10pt]%                    increased spacing between rows
+		\eliminationstep
+		{
+			4 & -8 & 5 & 1 & 0 & 0 \\
+			0 &  1 & -1 & -1 & 1 & 0 \\
+			0 &  0 & \frac{1}{4} & \frac{5}{4} & -2 & 1
+		}
+		{
+			\\
+			\\
+			+2R_{2}
+		}
+	\end{elimination}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\begin{problem}
+		
+	\end{problem}
+	
+		\begin{problem}
+		content...
+	\end{problem}
+
+		\begin{problem}
+		content...
+	\end{problem}
+	
+	\section{Въпроси}
+	Задачата за линейно оптимиране само тази ли е? \\
+	Какво трябва да правим по линейна алгебра? Само детерминанти и линейни системи?\\
+	Детерминанти 2х2 или 3х3?\\
+	
+	
+	
+	
+	\end{document}
