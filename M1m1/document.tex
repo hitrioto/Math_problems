@@ -4,6 +4,7 @@
 
 \usepackage{systeme}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 
 \usepackage{cmap}
 \usepackage[utf8]{inputenc}
@@ -15,6 +16,7 @@
 %\use
 \newtheorem{problem}{Задача}
 \newtheorem{theorem}{Теорема}
+\newtheorem{example}{Пример}
 \newcounter{solution}
 
 \usepackage{graphicx}
@@ -31,7 +33,8 @@
 	quotes}
 \usepackage{siunitx}
 
-%%%%
+% preparation for gaussian elimination
+%%%%%%%%%%%%%%%%%%
 \usepackage[margin=1in]{geometry}
 \usepackage{mathtools}
 \usepackage{array}
@@ -84,23 +87,129 @@
 
 
 
-\date{}
+%\date{}
 
 \title{Хакване на някаква математика в УНСС}
 \begin{document}
 	\maketitle
 	
-	\section{Теми и коментари. Теория	}
+	\section{Теми и коментари. Теория}
 	
 	\subsection{Основни вероятностни понятия}
-	вероятност, събитие, благоприятно събитие, пермутации, комбинации, вариации, \\
+	
+	\begin{definition}  вероятност, събитие, благоприятно събитие: \\
+		\textbf{text} \\
+		\textbf{Вероятност} наричаме \\
+		\textbf{text}	\\
+		\textbf{text} \\
+
+\end{definition}
+	
+	
+\begin{definition} пермутации, комбинации, вариации : \\
+	\textbf{text} \\
+	\textbf{Вероятност} наричаме \\
+	\textbf{text}	\\
+	\textbf{text} \\
+	
+\end{definition}
+
+
+\begin{definition}
 	случайна величина(непрекъсната и дискретна), разпределение, плътност, 
+\end{definition}
 	
 	
 	
 	\section{Решавани задачи и техни подобни}
 	
 	\begin{problem}
+	Пермутация на баби на пейка. 
+
+	Пенка, Зинка, Любка \\
+	ПЗЛ, ПЛЗ, ЗЛП, ЗПЛ, ЛПЗ, ПЗП \\
+
+
+	\end{problem}	
+	
+	
+	\begin{problem}
+		Вариация телефонен номер
+	\end{problem}
+	
+		\begin{problem}
+		Комбинация избиране на топки от урна
+	\end{problem}
+
+		\begin{problem}
+			Очакване на хвърляне на зар
+			\begin{tabular}{|c|c c c c c c|} 
+				\hline
+				X & 1 & 2 & 3 & 4 & 5 & 6 \\ 
+				\hline
+				P & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$  \\ 
+				\hline
+			\end{tabular}
+		\newline
+		$\mathbb E(X) = \frac{1}{6}(1+2+3+4+5+6) = \frac{7}{2} = 3,5 $ \\
+		Стандартно отклонение:
+		\begin{tabular}{|c|c c c c c c|} 
+			\hline
+			$X^2$ & 1 & 4 & 9 & 16 & 25 & 36 \\ 
+			\hline
+			P & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$ & $\frac{1}{6}$  \\ 
+			\hline
+		\end{tabular}
+	\newline
+		$\mathbb E(X^2) = \frac{1}{6}(1+4+9+16+25+36) = $ \\
+		$ Var(X) = E(X^2) - (E(X))^2 =  $
+	\end{problem}
+	
+	
+	\begin{problem}
+	Задача
+		\begin{tabular}{|c|c c c c c c||} 
+		\hline
+		P&	0& 2&  50&  200&  1000&  \\
+		\hline
+		W&	x& 100&  20&  5&  1&  \\
+		\hline
+	\end{tabular}
+
+\begin{problem}
+	Задача за хвърляне на два зара
+	\begin{tabular}{|c|c c c c c c|}
+	  & 1 & 2 & 3 & 4 & 5 & 6 \\
+		\hline
+	 1  & 2 & 3 & 4 & 5 & 6 & 7 \\
+	2 &	 3 & 4 & 5 & 6 & 7 & 8 \\
+	3 &	4 & 5 & 6 & 7 & 8 & 9 \\
+4 &		 5 & 6 & 7 & 8 & 9 & 10 \\
+5 &	6 & 7 & 8 & 9 & 10 & 11 \\
+6 &	7 & 8 & 9 & 10 & 11 & 12 \\
+
+\end{tabular}
+	
+\end{problem}
+	
+	$ x = 20000- 1-5-20-100 = 19874$\\
+	
+	
+	Очаквана печалба = (2.100 + 50.20 + 200.5 + 1.1000 ) / 20000 \\
+	\end{problem}
+	
+	\begin{problem}[Задача за белот]
+	
+	Да се добави задача с карти - белот 
+	$\frac{4}{32}\frac{3}{31}\frac{4}{30}\frac{3}{29}	$\\
+	
+	ДПДП	
+	\end{problem}
+	
+	\vspace{4cm}
+	
+	
+	\begin{problem} Гаусова елиминация(test)
 		\begin{equation*}
 			\systeme{
 				3x +7z = 20,
@@ -148,66 +257,18 @@
 		}
 	\end{elimination}
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	\begin{problem}
-		content...
-	\end{problem}
-	
-	
-	1 2 3 4 5 6\\
-
-	1/6\\
-	
-	(1-6 , 1-6)
-	
-	1 2 3 4 5 6\\
-1	\\
-2   \\
-3 \\
-4\\
-5\\
-6\\
-
-Пенка, Зинка, Любка \\
-ПЗЛ, ПЛЗ, ЗЛП, ЗПЛ, ЛПЗ, ПЗП \\
-
-	
-	
+	Матрични уравнения: \\
 	$AX = B $\\
-	
 	$X = A^{-1} B$
 	
 	
-	
-	\begin{problem}
-		
-	\end{problem}
-	
-		\begin{problem}
-		content...
-	\end{problem}
-
-		\begin{problem}
-		content...
-	\end{problem}
-	
-	\begin{table}[]
-		\begin{tabular}{llllll}
-			0& 2&  50&  200&  1000&  \\
-			X& 100&  20&  5&  1&  \\
-		\end{tabular}
-	\end{table}
-	$ X = 20000- 1-5-20-100 = 19874$\\
-	
-	Очаквана печалба = (2.100 + 50.20 + 200.5 + 1.1000 ) / 20000
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	
-	
-	\section{Въпроси}
-	Задачата за линейно оптимиране само тази ли е? \\
-	Какво трябва да правим по линейна алгебра? Само детерминанти и линейни системи?\\
-	Детерминанти 2х2 или 3х3?\\
+	\section{Въпроси и отговори}
+	Задачата за линейно оптимиране само тази ли е? -Да. \\
+	Какво трябва да правим по линейна алгебра? Само детерминанти и линейни системи? - Засега нищо.\\
+	Детерминанти 2х2 или 3х3? - Може само да направим тренировъчен пример за пълнота.\\
 	
 	
 	
